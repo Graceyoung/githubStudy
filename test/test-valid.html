@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>fullPage test</title>
+		<style>
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			div.component{
+				width:50%;
+				height:50%;
+				background-color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 测试fullPage.js切换页面 -->
+		<div id="h5">
+			<div class="page section">
+				<div class="component" id="page-1">第一页</div>
+			</div>
+			<div class="page section" id="page-2">
+				<div class="component">第二页</div>
+			</div>
+			<div class="page section" id="page-3">
+				<div class="component">第三页</div>
+			</div>
+		</div>
+
+		<script src="../js/lib/jquery.js"></script>
+		<script src="../js/lib/jquery-ui.min.js"></script>
+		<script src="../js/lib/jquery.fullPage.js"></script>
+		<script>
+			$(function(){
+				$('#h5').fullpage({
+					'sectionsColor':['#254875','#00ff00','#695684'],
+					onLeave:function(index,nextIndex,direction){
+						$('#h5').find('.page').eq(index-1).trigger('onLeave');
+					},
+					afterLoad:function(anchorLink,index){
+						$('#h5').find('.page').eq(index-1).trigger('onLoad');
+					}
+				});
+				$('.page').on('onLeave',function(){
+					$(this).find('.component').trigger('onLeave');;
+				});
+				$('.page').on('onLoad',function(){
+					$(this).find('.component').trigger('onLoad');;
+				});
+				$('.component').on('onLeave',function(){
+					$(this).fadeOut();
+					return false;
+				});
+				$('.component').on('onLoad',function(){
+					$(this).fadeIn();
+					return false;
+				});
+			});
+		</script>
+	</body>
+</html>

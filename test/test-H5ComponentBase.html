@@ -38,13 +38,23 @@
 				height:500,
 				bg:'p1_people.png',
 				css:{
-					top:50,
-					left:50
+					bottom:0,
+					left:50,
+					opacity:0
 				},
+				animateIn:{bottom:80,opacity:1},
+				animateOut:{bottom:0,opacity:0},
 				center:true
 			};
 			var H5 = new H5ComponentBase('myBase',cfg);
 			$('.iphone').append(H5);
+
+			//测试载入 移出动画
+			var isLeave = true;
+			$('body').click (function(){
+				$('.H5_component').trigger(isLeave?'onLeave':'onLoad');
+				isLeave = !isLeave;
+			})
 		</script>
 	</body>
 </html>

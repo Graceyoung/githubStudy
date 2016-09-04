@@ -8,6 +8,7 @@ var H5ComponentBase = function(name,cfg){
 	//给组件添加class
 	var cls = 'h5_component_'+cfg.type+' h5_component_name_'+name;
 	var component = $('<div class="H5_component '+cls+'" id="'+id+'"></div>');
+
 	cfg.text && component.text(cfg.text);
 	cfg.width && component.width(cfg.width/2);
 	cfg.height && component.height(cfg.height/2);
@@ -19,6 +20,17 @@ var H5ComponentBase = function(name,cfg){
 			left:'50%'
 		});
 	}
+
+	//载入 移出的动画
+	component.on('onLeave',function(){
+		cfg.animateIn && component.animate(cfg.animateIn);
+		return false;
+	});
+	component.on('onLoad',function(){
+		$(this).fadeIn();
+		return false;
+	});
+
 
 	// 很多自定义的参数
 

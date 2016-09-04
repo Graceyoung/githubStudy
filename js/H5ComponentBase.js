@@ -21,6 +21,17 @@ var H5ComponentBase = function(name,cfg){
 		});
 	}
 
+	//载入 移出的动画
+	component.on('onLeave',function(){
+		cfg.animateIn && component.animate(cfg.animateIn);
+		return false;
+	});
+	component.on('onLoad',function(){
+		cfg.animateIn && component.animate(cfg.animateOut);
+		return false;
+	});
+
+
 	// 很多自定义的参数
 
 	return component;

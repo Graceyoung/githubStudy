@@ -1,0 +1,14 @@
+/* H5对象样式 */
+html,body{
+	margin:0;
+	padding:0;
+}
+.H5{
+	height:100%;
+}
+.H5_page{
+	height:100%;
+	width:100%;
+	background-color:#ddd;
+	position:relative;
+}

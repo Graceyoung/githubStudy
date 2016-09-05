@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>test-H5</title>
+		<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/H5.css" />
+	</head>
+	<body>
+		<!-- 测试H5对象内容组织类&添加页面 添加组件 页面的切换 -->
+
+		<!-- 引入H5ComponentBase资源库 -->
+		<script type="text/javascript" src="../js/lib/jquery.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+
+		<!-- 引入H5资源 -->
+		<script type="text/javascript" src="../js/H5.js"></script>
+		<script type="text/javascript">
+			var h5 = new H5();
+			h5.addPage('first','')
+					.addComponent('logo',{
+						width:300,
+						height:300,
+						center:true,
+						text:'hi',
+						css:{
+							backgroundColor:'#ffcc00',
+							opacity:0,
+							transition:'all 1s'
+						},
+						animateIn:{
+							opacity:1,
+							top:200,
+							left:400
+						},
+						animateOut:{
+							opacity:0,
+							top:-300,
+							left:-100
+						}
+					})
+					.addComponent('slogo',{
+						width:300,
+						height:300,
+						center:true,
+						text:'hi',
+						css:{
+							backgroundColor:'#ff0000',
+							bottom:100
+						}
+					})
+			  .addPage('des','第2页')
+					.addComponent('caption',{
+						width:300,
+						height:300,
+						text:'核心理念',
+						css:{
+							backgroundColor:'#ff0000',
+							bottom:100
+						},
+						center:true
+						
+					})
+			  .addPage('a','第3页')
+			  .addPage('b','第4页')
+			  .loader();
+		</script>
+	</body>
+</html>

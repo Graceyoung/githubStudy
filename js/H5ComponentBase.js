@@ -2,12 +2,11 @@
 
 var H5ComponentBase = function(name,cfg){
 	var cfg = cfg ||{};
-	console.log(cfg);
 	var id = ('h5_c_'+Math.random()).replace('.','_');
 
 	//给组件添加class
-	var cls = 'h5_component_'+cfg.type+' h5_component_name_'+name;
-	var component = $('<div class="H5_component '+cls+'" id="'+id+'"></div>');
+	var cls = ' h5_component_'+cfg.type;
+	var component = $('<div class="H5_component h5_component_name_'+name+cls+'" id="'+id+'"></div>');
 
 	cfg.text && component.text(cfg.text);
 	cfg.width && component.width(cfg.width/2);
@@ -23,11 +22,13 @@ var H5ComponentBase = function(name,cfg){
 
 	//载入 移出的动画
 	component.on('onLeave',function(){
-		cfg.animateIn && component.animate(cfg.animateIn);
+		$(this).removeClass(cls+'_load').addClass(cls+'_leave');
+		cfg.animateIn && component.animate(cfg.animateOut);
 		return false;
 	});
 	component.on('onLoad',function(){
-		cfg.animateIn && component.animate(cfg.animateOut);
+		$(this).removeClass(cls+'_leave').addClass(cls+'_load');
+		cfg.animateIn && component.animate(cfg.animateIn);
 		return false;
 	});
 

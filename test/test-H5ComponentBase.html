@@ -52,8 +52,8 @@
 			//测试载入 移出动画
 			var isLeave = true;
 			$('body').click (function(){
-				$('.H5_component').trigger(isLeave?'onLeave':'onLoad');
 				isLeave = !isLeave;
+				$('.H5_component').trigger(isLeave?'onLeave':'onLoad');
 			})
 		</script>
 	</body>

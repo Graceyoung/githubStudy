@@ -48,6 +48,8 @@
 			};
 			var H5 = new H5ComponentBase('myBase',cfg);
 			$('.iphone').append(H5);
+
+			//测试载入 移出动画
 			var isLeave = true;
 			$('body').click (function(){
 				$('.H5_component').trigger(isLeave?'onLeave':'onLoad');

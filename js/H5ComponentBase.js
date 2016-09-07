@@ -2,11 +2,11 @@
 
 var H5ComponentBase = function(name,cfg){
 	var cfg = cfg ||{};
-	var id = ('h5_c_'+Math.random()).replace('.','_');
+	var id = ('H5_c_'+Math.random()).replace('.','_');
 
 	//给组件添加class
-	var cls = ' h5_component_'+cfg.type;
-	var component = $('<div class="H5_component h5_component_name_'+name+cls+'" id="'+id+'"></div>');
+	var cls = '  H5_component_'+cfg.type;
+	var component = $('<div class="H5_component H5_component_name_'+name+cls+'" id="'+id+'"></div>');
 
 	cfg.text && component.text(cfg.text);
 	cfg.width && component.width(cfg.width/2);

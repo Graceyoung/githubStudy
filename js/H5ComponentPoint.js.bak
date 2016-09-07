@@ -12,9 +12,9 @@ var H5ComponentPoint = function(name,cfg){
 		var point = $('<div class="point point_'+index+'"></div>');
 		
 		//每个散点图宽高的比例，较第一个数据的比例而言
-		var pre = (item[1]/base*100)+'%';
+		var whper = (item[1]/base*100)+'%';
 
-		point.width(pre).height(pre);//设置散点图的宽高
+		point.width(whper).height(whper);//设置散点图的宽高
 		
 
 		if(item[2]){
@@ -26,12 +26,14 @@ var H5ComponentPoint = function(name,cfg){
 
 			point.css('left',item[3]).css('top',item[4]);
 		}
+
+		//放文字的框框，一个大框，一个小框
 		var name = $('<div class="name"></div>');
-		var pre = $('<div class="pre"></div>');
+		var per = $('<div class="per"></div>');
 		name.text(item[0]);
 		pre.text(item[2]);
 
-		name.append(pre);
+		name.append(per);
 		point.append(name);
 		component.append(point);
 	});

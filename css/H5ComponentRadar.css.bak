@@ -1,0 +1,29 @@
+/* 折线图组件样式 */
+.H5_component_radar{
+	
+}
+.H5_component_radar canvas{
+	position:absolute;
+	top:0;
+	left:0;/* 用canvas做动画，会进行分层，要用到 z-index */
+	width:100%;
+	height:100%;
+}
+.H5_component_radar .text{
+	position:absolute;
+	color:#000;
+	font-size:12px;
+	height:15px;
+	line-height:15px;
+	text-align:center;
+	width:62px;
+	margin-left:-30px;
+	opacity:0;
+}
+.H5_component_radar_load .text{
+	transition:all 1s 1.5s;
+	opacity:1;
+}
+.H5_component_radar_leave .text{
+	opacity:0;
+}

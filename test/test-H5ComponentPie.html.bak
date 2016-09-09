@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>test-H5ComponentPie</title>
+		<link rel="stylesheet" href="../css/H5ComponentBase.css" />
+		<link rel="stylesheet" href="../css/H5ComponentPie.css" />
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+				background-color:#000;
+				font-size:12px;
+			}
+			.iphone{
+				width:340px;
+				height:640px;
+				background-color:#fff;
+				position:absolute;
+				top:50%;
+				left:50%;
+				margin:-270px 0 0 -170px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 用于测试H5ComponentPie对象（饼图） -->
+		<div class="iphone"></div>
+		<script type="text/javascript" src="../js/lib/jquery.js"></script>
+		<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+		<script type="text/javascript" src="../js/H5ComponentPie.js"></script>
+		<script type="text/javascript">
+			var cfg = {
+				type:'pie',
+				width:566,
+				height:566,
+				data:[
+					['js',0.2,'#ff7676'],
+					['html5',0.1,'#ffad69'],
+					['css3',0.07,'#99c0ff'],
+					['jquery',0.02,'#5ddbd8'],
+					['nodejs',0.01,'#eee']
+				],
+				css:{
+					top:100,
+					left:50,
+					opacity:0
+				},
+				animateIn:{top:200,opacity:1},
+				animateOut:{top:100,opacity:0},
+				center:true
+			};
+			var H5 = new H5ComponentRadar('pie',cfg);
+			$('.iphone').append(H5);
+
+			//测试载入 移出动画
+			var isLeave = true;
+			$('body').click (function(){
+				isLeave = !isLeave;
+				$('.H5_component').trigger(isLeave?'onLeave':'onLoad');
+			})
+		</script>
+	</body>
+</html>

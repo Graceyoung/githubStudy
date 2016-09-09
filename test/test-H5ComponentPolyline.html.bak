@@ -6,9 +6,9 @@
 		<meta name="Author" content="">
 		<meta name="Keywords" content="">
 		<meta name="Description" content="">
-		<title>test-H5ComponentPoint</title>
+		<title>test-H5ComponentPolyline</title>
 		<link rel="stylesheet" href="../css/H5ComponentBase.css" />
-		<link rel="stylesheet" href="../css/H5ComponentPoint.css" />
+		<link rel="stylesheet" href="../css/H5ComponentPolyline.css" />
 		<style type="text/css">
 			html,body{
 				margin:0;
@@ -28,32 +28,35 @@
 		</style>
 	</head>
 	<body>
-		<!-- 用于测试H5ComponentPoint对象（散点图组件） -->
+		<!-- 用于测试H5ComponentPolyline对象（基本的图文组件） -->
 		<div class="iphone"></div>
 		<script type="text/javascript" src="../js/lib/jquery.js"></script>
 		<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
-		<script type="text/javascript" src="../js/H5ComponentPoint.js"></script>
+		<script type="text/javascript" src="../js/H5ComponentPolyline.js"></script>
 		<script type="text/javascript">
 			var cfg = {
-				type:'point',
-				width:200,
-				height:200,
+				type:'polyline',
+				width:566,
+				height:366,
+				step:10,
 				data:[
-					['A',0.4,'green'],
-					['B',0.2,'yellow','0','-120%'],
-					['C',0.2,'red','0','120%']
+					['javascript',0.4,'#ff2277'],
+					['html5',0.2],
+					['css3',0.5],
+					['jquery',0.3],
+					['nodejs',0.2]
 				],
 				css:{
-					bottom:0,
+					top:100,
 					left:50,
 					opacity:0
 				},
-				animateIn:{bottom:300,opacity:1},
-				animateOut:{bottom:0,opacity:0},
+				animateIn:{top:200,opacity:1},
+				animateOut:{top:100,opacity:0},
 				center:true
 			};
-			var H5Point = new H5ComponentPoint('point',cfg);
-			$('.iphone').append(H5Point);
+			var H5 = new H5ComponentPolyline('polyline',cfg);
+			$('.iphone').append(H5);
 
 			//测试载入 移出动画
 			var isLeave = true;

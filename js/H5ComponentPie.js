@@ -95,8 +95,10 @@ var H5ComponentRadar = function(name,cfg){
 		text.append(per);
 		per.text((cfg.data[i][1]*100>>0)+'%');
 		r = r+5;
-		var x = r_x - r*Math.sin(-r_deg[i]-0.5*Math.PI);
-		var y = r_y - r*Math.cos(-r_deg[i]-0.5*Math.PI);
+
+		//让数据显示在每段弧的中间点 +2*Math.PI*cfg.data[i][1]/2
+		var x = r_x - r*Math.sin(-r_deg[i]-0.5*Math.PI+2*Math.PI*cfg.data[i][1]/2);
+		var y = r_y - r*Math.cos(-r_deg[i]-0.5*Math.PI+2*Math.PI*cfg.data[i][1]/2);
 		if(x>w/2){
 			text.css('left', x/2);
 		}else{

@@ -40,16 +40,18 @@
 				height:200,
 				data:[
 					['A',0.4,'green'],
-					['B',0.2,'yellow','0','-120%'],
-					['C',0.2,'red','0','120%']
+					['B',0.2,'yellow','-60','-120'],
+					['C',0.2,'red','50','120']
 				],
 				css:{
-					bottom:0,
+					bottom:200,
 					left:50,
-					opacity:0
+					opacity:0,
+					transition:'all 1s',
+					'-webkit-transition':'all 1s'
 				},
-				animateIn:{bottom:300,opacity:1},
-				animateOut:{bottom:0,opacity:0},
+				animateIn:{opacity:1},
+				animateOut:{opacity:0},
 				center:true
 			};
 			var H5Point = new H5ComponentPoint('point',cfg);

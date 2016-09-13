@@ -1,7 +1,5 @@
 /* 折线图组件样式 */
-.H5_component_polyline{
-	
-}
+
 .H5_component_polyline canvas{
 	position:absolute;
 	top:0;
@@ -15,13 +13,13 @@
 	height:15px;
 	line-height:15px;
 	text-align:center;
+	color:#000;
 	font-size:12px;
-	transform:scale(0.8);
-	-webkit-transform:scale(0.8);
+	transform:scale(0.9);
+	-webkit-transform:scale(0.9);
 	opacity:0;
 }
 .H5_component_polyline_load .text{
-	transition: all 0.5s;
 	opacity:1;
 }
 .H5_component_polyline_leave .text{

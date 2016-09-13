@@ -72,11 +72,10 @@ var H5ComponentPolyline = function(name,cfg){
 			ctx.fillStyle = '#ff725f';
 			ctx.fill();
 			
-			//文字
-			ctx.beginPath();
+			// 百分数值
 			ctx.fillStyle = '#000';
+			ctx.font = '18px Arial';
 			ctx.fillText(per+'%',x-6,y-25);
-			ctx.fill();
 		}
 
 		//画折线 填充阴影

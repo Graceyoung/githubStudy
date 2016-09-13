@@ -87,8 +87,7 @@ var H5ComponentRadar = function(name,cfg){
 
 		//圆圈
 		for(j=0;j<data_l;j++){
-			var per = cfg.data[j][1];
-			var per_r = max_r * per *perc;
+			var per_r = max_r * cfg.data[j][1] *perc;
 			r_deg = (2*Math.PI/360)*(360/data_l)*j;
 			x = r_x - per_r*Math.sin(r_deg);
 			y = r_y - per_r*Math.cos(r_deg);
@@ -97,18 +96,6 @@ var H5ComponentRadar = function(name,cfg){
 			ctx.beginPath();
 			ctx.arc(x,y,6,0,360);
 			ctx.fillStyle = '#ff7676';
-			ctx.fill();
-			
-			// 添加百分数 显示
-			var gap;
-			if(r_deg<(2*Math.PI/360)*180){
-				gap = -10;
-			}else{
-				gap = 10;
-			}
-			ctx.beginPath();
-			ctx.fillStyle = '#000';
-			ctx.fillText(per*100+'%',x+gap,y-10);
 			ctx.fill();
 		}
 		
@@ -123,12 +110,23 @@ var H5ComponentRadar = function(name,cfg){
 		ctx.strokeStyle = '#ff7676';
 		ctx.stroke();
 
-		
-	
+		// 添加百分数 显示
+		for(i=0;i<data_l;i++){
+			var gap;
+			if(r_deg<(2*Math.PI/360)*180){
+				gap = -10;
+			}else{
+				gap = 10;
+			}
+			
+			ctx.fillStyle = '#000';
+			ctx.font = '20px Arial';
+			ctx.fillText(cfg.data[i][1]*100+'%',per_x[i]+gap,per_y[i]+gap);
+		}
 	}
 	component.append(can);
-	//加数据 用DOM添加
-	
+
+	// 加数据 用DOM添加
 	for(var i=0;i<data_l;i++){
 		var text = $('<div class="text"></div>');
 		//text_w = lattice_w/2;

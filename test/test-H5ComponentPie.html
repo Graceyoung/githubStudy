@@ -40,10 +40,10 @@
 				height:566,
 				data:[
 					['js',0.2,'#ff7676'],
-					['html5',0.7,'#ffad69'],
 					['css3',0.07,'#99c0ff'],
 					['jquery',0.02,'#5ddbd8'],
-					['nodejs',0.01,'#eee']
+					['nodejs',0.01,'#eee'],
+					['html5',0.7,'#ffad69']
 				],
 				css:{
 					top:100,
@@ -54,7 +54,7 @@
 				animateOut:{top:100,opacity:0},
 				center:true
 			};
-			var H5 = new H5ComponentRadar('pie',cfg);
+			var H5 = new H5ComponentPie('pie',cfg);
 			$('.iphone').append(H5);
 
 			//测试载入 移出动画

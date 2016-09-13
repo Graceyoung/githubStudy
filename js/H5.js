@@ -9,7 +9,7 @@ var H5 = function(){
 	/*
 	 *@param {string} name 页的名称，用来添加class
 	 *@param {string} text 页内的默认文本
-	 *return {H5} H5对象，可以重复使用H5对象支持的方法
+	 *return {function} H5对象，可以重复使用H5对象支持的方法
 	 */
 	this.addPage = function(name,text){
 		var page = $('<div class="H5_page section"></div>');
@@ -21,6 +21,11 @@ var H5 = function(){
 		}
 		this.el.append(page);
 		this.page.push(page);
+
+		if((typeof this.whenAddPage)==='function'){
+			this.whenAddPage();
+		}
+
 		return this;
 	};
 
@@ -37,10 +42,25 @@ var H5 = function(){
 		switch(cfg.type){
 			case 'base':
 				component = new H5ComponentBase(name,cfg);
-			break;
+				break;
+			case 'polyline':
+				component = new H5ComponentPolyline(name,cfg);
+				break;
+			case 'pie':
+				component = new H5ComponentPie(name,cfg);
+				break;
+			case 'radar':
+				component = new H5ComponentRadar(name,cfg);
+				break;
+			case 'bar':
+				component = new H5ComponentBar(name,cfg);
+				break;
+			case 'point':
+				component = new H5ComponentPoint(name,cfg);
+				break;
 			default:
 		}
-			//console.log(page);
+			
 		page.append(component);
 
 		return this;
@@ -63,6 +83,9 @@ var H5 = function(){
 		
 		//页面加载完成之后显示
 		this.el.show();
+	
 	}
+	this.loader =(typeof Loading === 'function')?Loading:this.loader;
+
 	return this;
 }

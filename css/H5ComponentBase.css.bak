@@ -1,5 +1,0 @@
-/* 基本图文组件样式 */
-.H5_component{
-	background-size:100%;
-	background-repeat:no-repeat;
-}

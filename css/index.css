@@ -1,0 +1,56 @@
+/* H5 web app 样式 */
+body{
+	margin:0;
+	padding:0;
+}
+.H5_page{
+	background-image:url("../imgs/page_bg.png");
+}
+.H5_page_face{
+	background-image:url("../imgs/face_bg.png");
+}
+.H5_component_name_caption{
+	width:283px;
+	height:160px;
+	line-height:140px;
+	text-align:center;
+	background-image:url("../imgs/page_caption_bg.png");
+	top:10%;
+	left:0;
+	color:#fff;
+	font-size:18px;
+}
+.H5_component_name_slogo{
+	animation:shake 2s linear infinite 1s;
+	-webkit-animation:shake 2s linear infinite 1s;
+}
+.H5_component_name_back{
+	top:30px;
+	animation:back 2s linear infinite;
+	-webkit-animation:back 2s linear infinite;
+}
+.H5_component_name_tail_slogan{
+	animation:shake 2s linear infinite 2s;
+	-webkit-animation:shake 2s linear infinite 2s;
+}
+
+
+@keyframes back{
+	50% {top:20px;}
+}
+@-webkit-keyframes back{
+	50% {top:20px;}
+}
+@keyframes shake{
+	0%,100% {transform:rotate(0deg);}
+	25% {transform:rotate(-15deg);}
+	50% {transform:rotate(15deg);}
+	75% {transform:rotate(-15deg);}
+}
+@-webkit-keyframes shake{
+	0%,100% {-webkit-transform:rotate(0deg);}
+	25% {-webkit-transform:rotate(-15deg);}
+	50% {-webkit-transform:rotate(15deg);}
+	75% {-webkit-transform:rotate(-15deg);}
+}
+

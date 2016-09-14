@@ -1,0 +1,8 @@
+@charset 'utf-8'
+body{
+	background-color:#ddd;
+}
+.container{
+	width:640px;
+	margin:0 auto;
+}

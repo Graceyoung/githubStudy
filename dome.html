@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>the description of h5WebApp</title>
+		<style>
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			body{
+				width:100%;
+				height:100%;
+				background:url("imgs/dome_bg.jpg") no-repeat;
+				/* background:linear-gradient(top,#0000ff, #fff); */
+				/* background:-webkit-linear-gradient(top,#0000ff, #fff); */
+				background-size:cover;
+				background-position:fixed;
+			}
+			#content{
+				width:900px;
+				margin:60px auto;
+				background-color:rgba(255,255,255,0.8);
+				padding:20px;
+				padding-left:100px;
+				border-radius:4px;
+				position:relative;
+			}
+			#content .date_nav{
+				width:750px;
+				height:100%;
+				border-left:2px solid #0000ff;
+				padding:10px;
+			}
+			#content .date_nav .date{
+				position:absolute;
+				left:10px;
+				top:35px;
+			}
+			#content .date_nav details{
+				margin-bottom:45px;
+			}
+			#content .date_nav .display{
+				margin:45px 0;
+				text-decoration:none;
+				display:block;
+			}
+			summary{
+				outline:none;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="date_nav">
+				<h2>H5组件式开发web app</h2>
+				<span class="date">2016.09.14</span>
+				<a class="display" href="index.html"><span>效果展示：</span>h5WebApp</a>
+				<details>
+					<summary>相关技术</summary>
+						<ul type="disc">
+							<li>
+								<h4>fullPage.js插件</h4>
+								<p>fullPage.js是一个基于jQuery的插件，它能够很方便、很轻松的制作出全屏网站。</p>
+								<p>源码详见：<a href="https://github.com/alvarotrigo/fullPage.js">fullPage.js</a></p>
+							</li> 
+							<li>
+								<h4>HTML5 CSS3</h4>
+								<p>页面的动画用到了CSS3的动画animation等。</p>
+								<p>图表组件中的柱图是用CSS3新增的属性等完成的。</p>
+							</li> 
+							<li>
+								<h4>HTML5 Canvas</h4>
+								<p>canvas元素用于在网页上绘制图形。</p>
+								<p>图表组件中的折线图、雷达图、饼图、散点图都是用canvas实现的，canvas中的重点是坐标的计算。</p>
+							</li>
+						</ul>
+				</details>
+				<details>
+					<summary>前端开发</summary>
+						<ol start="1">
+							<li>
+								<h4>设计稿标注&切图</h4>
+								<p>标注工具MarkMan</p>
+							</li> 
+							<li>
+								<h4>编写静态页</h4>
+								<p>验证fullPage.js插件的页面切换功能</p>
+								<p>验证利用fullPage.js 事件，实现组件的“入场、出场”动画</p>
+							</li>
+							<li>
+								<h4>开发测试</h4>
+								<p>“基本图文组件”类--H5ComponentBase</p>
+								<p>目的：实现 出场、 入场 动画提取</p>
+							</li>
+							<li>
+								<h4>开发测试</h4>
+								<p>内容组织类--H5</p>
+								<p>目的：实现内容页面与组件的组织功能，方便任意添加page、component内容</p>
+							</li>
+							<li>
+								<h4>开发图表组件</h4>
+								<p>H5ComponentBar</p>
+								<p>H5ComponentPolyline</p>
+								<p>H5ComponentRadar</p>
+								<p>H5ComponentPie</p>
+							</li>
+							<li>
+								<h4>loading功能的开发</h4>
+							</li>
+							<li>
+								<h4>功能整合</h4>
+								<p>实现设计稿</p>
+							</li>
+						</ol>
+				</details>
+				<details>
+					<summary>JS对象规划</summary>
+						<ul type="disc">
+							<li>
+								<h4>内容组织类：H5</h4>
+								<b>作用</b>
+								<p>组织H5报告的内容结构</p>
+								<p>设置H5报告的切换效果（fullPage.js）</p>
+								<b>方法</b>
+								<p>添加一个页addPage</p>
+								<p>添加一个组件addComponent.js）</p>
+								<p>展现所有页面loader</p>
+							</li> 
+							<li>
+								<h4>图文组件类：H5ComponentBase</h4>
+								<b>作用</b>
+								<p>输出一个DOM，内容可以是图片或者文字</p>
+								<b>事件</b>
+								<p>当前页载入：onLoad</p>
+								<p>当前页移出：onLeave</p>
+							</li>
+							<li>
+								<h4>图表组件类：H5Component...</h4>
+								<b>作用</b>
+								<p>在H5ComponentBase的基础之上插入DOM结构或canvas图形</p>
+								<b>事件</b>
+								<p>当前页载入移出：onLoad、onLeave</p>
+								<p>图表组件本身的生长动画</p>
+							</li>
+						</ul>
+				</details>
+				<details>
+					<summary>总结</summary>
+					<p>
+						该项目的核心是将页面的内容分成几个部分分别进行开发，也就是这里所说的图表组件对象，
+						每个组件对象都是独立的，可以同时进行，并且在以后的工作中可以应用。
+					</p>
+					<p>首先分析页面，有的页面是由图文(图片和文字)组成，有的页面是由图表(柱图、散点图、折线图、
+					雷达图等)组成，第一步创建一个基本的组件对象，图文组件和图表组件都是基于这个基本组件，
+					图表组件要分别创建组件对象，第二步将所有的组件对象联系起来，新创建一个对象，拥有addPage、addComponent和loader方法，分别是添加一个页面，添加一个组件以及加载完要做的事。</p>
+				</details>
+			</div>
+		</div>
+	</body>
+</html>

@@ -40,9 +40,9 @@
 			H5ComponentRadar				
 			H5ComponentPie
 			
-		loading功能的开发	
+    loading功能的开发	
 		
-		功能整合	
+    功能整合	
 			实现设计稿
 			
 ## JS对象规划		

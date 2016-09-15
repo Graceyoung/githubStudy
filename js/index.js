@@ -279,7 +279,8 @@ h5
 			opacity:0
 		},
 		animateIn:{top:'35%',opacity:1},
-		animateOut:{top:'20%',opacity:0}
+		animateOut:{top:'20%',opacity:0},
+		delay:500
 	})
 .addPage()
 	.addComponent('caption',{text:'后端处理'})

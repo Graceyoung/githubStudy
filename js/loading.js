@@ -30,7 +30,7 @@ var Loading = function(images){
 	}
 	
 	this.el.fullpage({
-		$('.loading').hide();
+		$('.loading').css('display','none');
 		
 		// 触发组件动画
 		onLeave:function(index,nextIndex,direction){

@@ -1,7 +1,6 @@
 # H5组件式开发web app
   相关技术——前端开发——JS对象规划——总结
-
-
+  ![preview](https://raw.github.com/Graceyoung/h5WebApp/master/mark/3_spec.png)
 
 ## 相关技术
  

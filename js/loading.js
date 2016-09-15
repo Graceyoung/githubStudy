@@ -30,7 +30,8 @@ var Loading = function(images){
 	}
 	
 	this.el.fullpage({
-
+		$('.loading').hide();
+		
 		// 触发组件动画
 		onLeave:function(index,nextIndex,direction){
 			$(this).find('.H5_component').trigger('onLeave');

@@ -154,8 +154,6 @@ var H5ComponentPie = function(name,cfg){
 									  (shadowA_y[1]>shadowB_y[0] && shadowA_y[1]<shadowB_y[1]);
 					
 					var result = intersect_x && intersect_y;
-					console.log(shadowA_x+':'+shadowB_x);
-					console.log(shadowA_y+':'+shadowB_y);
 					if(result){
 						if(willResort.length===0){
 							willResort.push(i);
@@ -168,13 +166,11 @@ var H5ComponentPie = function(name,cfg){
 					}
 				}
 			}
-			console.log(willResort);
 			reset(willResort);
 		}
 
 		// 重排
 		function reset(willResort){
-			console.log(willResort);
 			if(willResort.length>1){
 				for(var i=0;i<willResort.length;i++){
 					var element = text[willResort[i]];

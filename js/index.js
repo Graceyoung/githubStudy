@@ -140,7 +140,7 @@ h5
 		},
 		animateIn:{
 			opacity:1,
-			top:'34%'
+			top:'33%'
 		},
 		animateOut:{
 			opacity:0,

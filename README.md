@@ -10,8 +10,27 @@
       源码详见：https://github.com/alvarotrigo/fullPage.js
       
   	HTML5 CSS3
+  	  该页面是为了手机端浏览设计的，所以用到了移动端页面适配。
+  	  	<meta name = "viewport" content = "width =320px/device-width，
+  	  					   user-scalable=yes,
+  	  					   initial-scale = 1.0,
+  	  					   minimum-scale = 1.0,
+  	  					   maximum-scale=1.0,
+  	  					   target-densitydpi = dpi_value"> 
+	  	  	width [pixel_value | device-width(设备宽度)]
+			height [pixel_value | device-height(设备高度)]
+			user-scalable 是否允许手动缩放 （no||yes）
+			initial-scale 初始比例
+			minimum-scale 允许缩放的最小比例
+			maximum-scale 允许缩放的最大比例 
+			dpi_value
+				device-dpi  设备默认的像素密度
+				high-dpi    高像素密度
+				medium-dpi  中等的像素密度
+				low-dpi     低像素密度
+
   	  页面的动画用到了CSS3的动画animation等。
-  		图表组件中的柱图是用CSS3新增的属性等完成的。
+  	  图表组件中的柱图是用CSS3新增的属性等完成的。
   		
   	HTML5 Canvas
   		canvas元素用于在网页上绘制图形。

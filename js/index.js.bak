@@ -116,7 +116,7 @@ h5
 		},
 		animateIn:{
 			opacity:1,
-			top:'25%'
+			top:'30%'
 		},
 		animateOut:{
 			opacity:0,
@@ -140,7 +140,7 @@ h5
 		},
 		animateIn:{
 			opacity:1,
-			top:'34%'
+			top:'37%'
 		},
 		animateOut:{
 			opacity:0,
@@ -255,7 +255,7 @@ h5
 		},
 		animateIn:{top:'35%',opacity:1},
 		animateOut:{top:'20%',opacity:0},
-		delay:800,
+		delay:500,
 		center:true
 	})
 .addPage()
@@ -281,7 +281,7 @@ h5
 		},
 		animateIn:{top:'35%',opacity:1},
 		animateOut:{top:'20%',opacity:0},
-		delay:800
+		delay:500
 	})
 .addPage()
 	.addComponent('caption',{text:'后端处理'})

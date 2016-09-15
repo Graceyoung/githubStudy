@@ -255,6 +255,7 @@ h5
 		},
 		animateIn:{top:'35%',opacity:1},
 		animateOut:{top:'20%',opacity:0},
+		delay:500,
 		center:true
 	})
 .addPage()

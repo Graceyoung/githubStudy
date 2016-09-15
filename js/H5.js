@@ -5,9 +5,8 @@ var H5 = function(){
 	this.el = $('<div class="H5" id="'+this.id+'"></div>').hide();
 	this.page = [];
 	
-	var container = $('<div class="container"></div>');// 控制整个内容显示居中
-	$('body').append(container);
-	container.append(this.el);
+	
+	$('body').append(this.el);
 
 	/*
 	 *@param {string} name 页的名称，用来添加class

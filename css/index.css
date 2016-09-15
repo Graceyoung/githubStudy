@@ -10,9 +10,9 @@ body{
 	background-image:url("../imgs/face_bg.png");
 }
 .H5_component_name_caption{
-	width:283px;
-	height:160px;
-	line-height:140px;
+	width:245px;
+	height:61px;
+	line-height:60px;
 	text-align:center;
 	background-image:url("../imgs/page_caption_bg2.png");
 	top:10%;

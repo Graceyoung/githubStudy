@@ -28,10 +28,8 @@ var Loading = function(images){
 			return this;
 		}
 	}
-	
+	$('.loading').css('display','none');
 	this.el.fullpage({
-		$('.loading').css('display','none');
-		
 		// 触发组件动画
 		onLeave:function(index,nextIndex,direction){
 			$(this).find('.H5_component').trigger('onLeave');

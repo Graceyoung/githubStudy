@@ -125,7 +125,7 @@ h5
 		
 	})
 	.addComponent('description',{
-		text:'2013年，IT教育网的诞生引领中国IT职业从教育进入新时代。',
+		text:'2013年，IT教育网的诞生引领中国IT职业从教育进入新时代；高质量实战课程、全新教学模式、实时互动学习，以领先优势打造行业品牌。',
 		width:521,
 		height:335,
 		bg:'description_bg.gif',
@@ -137,6 +137,7 @@ h5
 			padding:'15px 10px',
 			color:'#fff',
 			opacity:0,
+			'line-height':'25px'
 		},
 		animateIn:{
 			opacity:1,

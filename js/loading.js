@@ -28,6 +28,7 @@ var Loading = function(images){
 			return this;
 		}
 	}
+	
 	$('.loading').css('display','none');
 	this.el.fullpage({
 		// 触发组件动画

@@ -1,4 +1,4 @@
-/* 散点图组件对象 */
+/* 柱状图组件对象 */
 
 var H5ComponentBar = function(name,cfg){
 	var cfg = cfg ||{};

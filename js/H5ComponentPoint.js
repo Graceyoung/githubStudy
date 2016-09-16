@@ -33,10 +33,10 @@ var H5ComponentPoint = function(name,cfg){
 		var name = $('<div class="name"></div>');
 		var per = $('<div class="per"></div>');
 		name.text(item[0]);
-		per.text(item[2]);
+		per.text((item[1]*100>>0)+'%');
 
-		name.append(per);
-		point.append(name);
+		per.append(name);
+		point.append(per);
 		component.append(point);
 	});
 

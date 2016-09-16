@@ -1,4 +1,4 @@
-/* 散点图组件样式 */
+/* 柱图组件样式 */
 .H5_component_bar {
 	
 }
@@ -27,15 +27,15 @@
 	height:100%;
 	width:0%;
 	border-radius:3px;
-	-webkit-trasition:all 1s 0.5s;
-	transition:all 1s 0.5s;
+	-webkit-transition:all 1s 1s;
+	transition:all 1s 1s;
 }
 .H5_component_bar .per{
 	height:100%;
 	float:left;
 	opacity:0;
-	-webkit-trasition:all 1s 1.5s;
-	transition:all 1s 1.5s;
+	-webkit-transition:all 1s 2s;
+	transition:all 1s 2s;
 }
 .H5_component_bar_leave .rate .bg{
 	width:0%;

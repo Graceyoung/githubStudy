@@ -2,8 +2,9 @@
 .H5_component_point .point{
 	position:absolute;
 	border-radius:50%;
+	color:#fff;
 }
-.H5_component_point .point .name{
+.H5_component_point .point .per{
 	width:100%;
 	height:30px;
 	text-align:center;
@@ -12,14 +13,24 @@
 	margin-top:-15px;
 	font-size:22px;
 }
-.H5_component_point .point .name .per{
+.H5_component_point .point .per .name{
 	font-size:0.5em;
 }
 .H5_component_point .point_0{
+	box-shadow:0 0 0 0px rgba(237,199,199,0.8);
 	animation: shadowChange 1.5s linear 2.5s infinite;
 }
+.H5_component_point .point_1{
+	box-shadow:0 0 0 0px rgba(237,199,199,0.8);
+	animation: shadowChange 1.5s linear 3s infinite;
+}
+.H5_component_point .point_2{
+	box-shadow:0 0 0 0px rgba(153, 193, 255,0.8);
+	animation: shadow2 1.5s linear 3s infinite;
+}
 @keyframes shadowChange{
-	0% {box-shadow:0 0 0 0px rgba(237,199,199,0.8);}
-	50% {box-shadow:0 0 0 10px rgba(237,199,199,0.8);}
-	100% {box-shadow:0 0 0 20px rgba(237,199,199,0.8);}
+	50% {box-shadow:0 0 0 15px rgba(237,199,199,0.8);}
+}
+@keyframes shadow2{
+	50% {box-shadow:0 0 0 15px rgba(153, 193, 255,0.8);}
 }

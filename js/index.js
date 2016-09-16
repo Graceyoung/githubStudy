@@ -198,11 +198,10 @@ h5
 		height:366,
 		step:10,
 		data:[
-			['javascript',0.4,'#ff2277'],
-			['html5',0.2],
-			['css3',0.5],
-			['jquery',0.3],
-			['nodejs',0.2]
+			['前端开发',0.4,'#ff2277'],
+			['移动开发',0.2],
+			['后端开发',0.29],
+			['数据处理',0.1]
 		],
 		css:{
 			top:'30%',
@@ -280,8 +279,7 @@ h5
 			opacity:0
 		},
 		animateIn:{top:'35%',opacity:1},
-		animateOut:{top:'20%',opacity:0},
-		delay:800
+		animateOut:{top:'20%',opacity:0}
 	})
 .addPage()
 	.addComponent('caption',{text:'后端处理'})
@@ -304,6 +302,28 @@ h5
 		},
 		animateIn:{top:'45%',opacity:1},
 		animateOut:{top:'20%',opacity:0},
+		center:true
+	})
+.addPage()
+	.addComponent('caption',{text:'课程难度级别分布'})
+	.addComponent('point',{
+		type:'point',
+		width:300,
+		height:300,
+		data:[
+			['中级',0.45,'#edc7c7'],
+			['初级',0.25,'#ffa4a4','-60','-120'],
+			['高级',0.35,'#99c1ff','60','-140']
+		],
+		css:{
+			bottom:150,
+			left:50,
+			opacity:0,
+			transition:'all 1s',
+			'-webkit-transition':'all 1s'
+		},
+		animateIn:{opacity:1},
+		animateOut:{opacity:0},
 		center:true
 	})
 .addPage('tail')

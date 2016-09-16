@@ -316,7 +316,7 @@ h5
 			['高级',0.35,'#99c1ff','60','-140']
 		],
 		css:{
-			bottom:150,
+			bottom:'10%',
 			left:50,
 			opacity:0,
 			transition:'all 1s',

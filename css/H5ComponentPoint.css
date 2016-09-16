@@ -19,18 +19,27 @@
 .H5_component_point .point_0{
 	box-shadow:0 0 0 0px rgba(237,199,199,0.8);
 	animation: shadowChange 1.5s linear 2.5s infinite;
+	-webkit-animation:shadowChange 1.5s linear 2.5s infinite;
 }
 .H5_component_point .point_1{
 	box-shadow:0 0 0 0px rgba(237,199,199,0.8);
 	animation: shadowChange 1.5s linear 3s infinite;
+	-webkit-animation: shadowChange 1.5s linear 3s infinite;
 }
 .H5_component_point .point_2{
 	box-shadow:0 0 0 0px rgba(153, 193, 255,0.8);
 	animation: shadow2 1.5s linear 3s infinite;
+	-webkit-animation: shadow2 1.5s linear 3s infinite;
 }
 @keyframes shadowChange{
 	50% {box-shadow:0 0 0 15px rgba(237,199,199,0.8);}
 }
+@-webkit-keyframes shadowChange{
+	50% {box-shadow:0 0 0 15px rgba(237,199,199,0.8);}
+}
 @keyframes shadow2{
+	50% {box-shadow:0 0 0 15px rgba(153, 193, 255,0.8);}
+}
+@-webkit-keyframes shadow2{
 	50% {box-shadow:0 0 0 15px rgba(153, 193, 255,0.8);}
 }
